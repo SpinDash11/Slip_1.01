@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4810681214103620548, guid: d1738cbc91798104ebf63e996965a929,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 6849735275368633198, guid: d1738cbc91798104ebf63e996965a929,
         type: 3}
       propertyPath: m_LocalScale.x

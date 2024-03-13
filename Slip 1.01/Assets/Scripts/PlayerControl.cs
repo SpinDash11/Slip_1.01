@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    private float speed = 10.0f;
+    public float speed = 20.0f;
+    public float boostSpeed;
+    public float dragSpeed;
 
     private Rigidbody rb;
 
@@ -24,5 +26,20 @@ public class PlayerControl : MonoBehaviour
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce (movement * speed);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "BoostPad")
+        {
+            boostSpeed = speed;
+            speed = boostSpeed * 2;
+        }
+
+        if(collision.gameObject.tag == "DragPad")
+        {
+            dragSpeed = speed;
+            speed = dragSpeed / 2;
+        }
     }
 }
