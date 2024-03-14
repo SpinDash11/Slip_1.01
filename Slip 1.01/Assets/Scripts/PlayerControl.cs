@@ -36,6 +36,13 @@ public class PlayerControl : MonoBehaviour
             speed = boostSpeed * 2;
         }
 
+        else
+        {
+            
+
+            speed = 25;
+        }
+
         if(collision.gameObject.tag == "DragPad")
         {
             dragSpeed = speed;
