@@ -12,7 +12,7 @@ public class BoostPad : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            this.gameObject.IsDestroyed();
+            
         }
     }
 }
