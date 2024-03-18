@@ -9,6 +9,13 @@ public class PlayerControl : MonoBehaviour
     public float boostSpeed;
     public float dragSpeed;
 
+    public Transform orientation;
+
+    float moveHorizontal;
+    float moveVertical;
+
+    Vector3 moveDirection;
+
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -20,14 +27,17 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = Input.GetAxisRaw("Horizontal");
+        moveVertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-
-        rb.AddForce (movement * speed);
+        PlayerMovement();
     }
 
+    private void PlayerMovement()
+    {
+        moveDirection = orientation.forward * moveVertical + orientation.right * moveHorizontal;
+        rb.AddForce(moveDirection.normalized * speed, ForceMode.Force);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "BoostPad")
