@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 87dbfe0e01bd59240a7a263609e0bee3
+  - enabled: 1
+    path: Assets/Scenes/Main Level - Logan's Scene.unity
+    guid: 7c1fb4fadbf20134fab2563fdf41e204
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
