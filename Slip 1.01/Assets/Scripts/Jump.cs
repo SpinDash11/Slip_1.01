@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public Rigidbody rb;
+    public float dive;
     private bool isJumping;
 
     // Update is called once per frame
@@ -14,6 +15,11 @@ public class Jump : MonoBehaviour
         {
             rb.AddForce(Vector3.up * 200);
             isJumping = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.AddForce(-Vector3.up * dive);
         }
     }
 
