@@ -14,19 +14,29 @@ public class Jump : MonoBehaviour
         {
             rb.AddForce(Vector3.up * 200);
             isJumping = true;
+            rb.GetComponent<Rigidbody>();
+            rb.mass = 2;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.AddForce(-Vector3.up * 5000);
         }
     }
+    
 
     private void OnCollisionEnter(Collision collision)
     {
         if ( collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            rb.drag = 0;
         }
 
         if (collision.gameObject.CompareTag("Wall"))
         {
             isJumping = false;
+            rb.mass = 2;
         }
     }
 }
