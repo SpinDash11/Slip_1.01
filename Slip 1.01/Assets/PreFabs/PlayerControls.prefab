@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2473126963028697010}
   - component: {fileID: 2076840762811708280}
   - component: {fileID: 2516934224952901687}
+  - component: {fileID: 1196418267876618499}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -97,9 +98,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 10000
+  field of view: 91
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -169,6 +170,21 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1196418267876618499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8768623110964144997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188158939d95e584baa95db07f6338db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensX: 800
+  sensY: 800
+  orientation: {fileID: 8600608361782566923}
 --- !u!1001 &3375422106738402452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 83232696535066266, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 83232696535066266, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
@@ -194,8 +210,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83232696535066266, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 83232696535066266, guid: 2cbddebc4e4344744b4a7435cf5524d7,
+        type: 3}
       propertyPath: m_CollisionDetection
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1692943815147173233, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
@@ -206,6 +227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095629529666094810, guid: 2cbddebc4e4344744b4a7435cf5524d7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3095629529666094810, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
@@ -230,22 +256,22 @@ PrefabInstance:
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
@@ -255,7 +281,7 @@ PrefabInstance:
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6452698637308347551, guid: 2cbddebc4e4344744b4a7435cf5524d7,
         type: 3}
@@ -312,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3454361210161398286}
+  dive: 5000
 --- !u!114 &8180673797226614964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,9 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d01b1fee03b8724889d50ab646e65fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
+  speed: 15
   boostSpeed: 0
   dragSpeed: 0
+  orientation: {fileID: 8600608361782566923}
 --- !u!114 &8181288195581590394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4154961994638561765}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c100a038b976cd4b866b8ef063c4d2e, type: 3}
   m_Name: 
