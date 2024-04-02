@@ -320,6 +320,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1196418267876618499, guid: 077c228510e6e22478a6bb3f9386cee2,
+        type: 3}
+      propertyPath: sensY
+      value: -800
+      objectReference: {fileID: 0}
     - target: {fileID: 2473126963028697010, guid: 077c228510e6e22478a6bb3f9386cee2,
         type: 3}
       propertyPath: field of view
