@@ -56,7 +56,11 @@ public class PlayerControl : MonoBehaviour
         if(collision.gameObject.tag == "DragPad")
         {
             dragSpeed = speed;
-            speed = dragSpeed / 2;
+        }
+
+        if (collision.gameObject.tag == "DeathZone")
+        {
+            speed = 0;
         }
     }
 }

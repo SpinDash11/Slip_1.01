@@ -24,6 +24,7 @@ public class Respawning : MonoBehaviour
         if (collision.gameObject.tag == "DeathZone")
         {
             this.transform.position = Respawn.transform.position;
+            
         }
     }
 }
