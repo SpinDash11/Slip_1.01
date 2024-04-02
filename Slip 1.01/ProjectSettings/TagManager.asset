@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - BoostPad
   - DragPad
+  - Key
   layers:
   - Default
   - TransparentFX
