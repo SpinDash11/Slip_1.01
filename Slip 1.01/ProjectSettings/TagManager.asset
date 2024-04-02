@@ -12,6 +12,7 @@ TagManager:
   - BoostPad
   - DragPad
   - Key
+  - Door
   layers:
   - Default
   - TransparentFX
