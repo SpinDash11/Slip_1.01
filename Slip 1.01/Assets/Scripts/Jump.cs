@@ -19,6 +19,11 @@ public class Jump : MonoBehaviour
             rb.mass = 2;
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            rb.mass = -5;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             rb.AddForce(-Vector3.up * 5000);
