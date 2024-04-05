@@ -30,6 +30,8 @@ public class PlayerControl : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
 
+        GearShiftFast();
+        GearShiftSlow();
         PlayerMovement();
     }
 
@@ -37,6 +39,22 @@ public class PlayerControl : MonoBehaviour
     {
         moveDirection = orientation.forward * moveVertical + orientation.right * moveHorizontal;
         rb.AddForce(moveDirection.normalized * speed, ForceMode.Force);
+    }
+
+    private void GearShiftFast()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            speed = 50;
+        }
+    }
+
+    private void GearShiftSlow()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            speed = 5;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
