@@ -1159,7 +1159,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -6838,6 +6838,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1494728814}
     - target: {fileID: 6081197431306270725, guid: 47288c1dffa738049ba3985e22888cbc,
+        type: 3}
+      propertyPath: keyText
+      value: 
+      objectReference: {fileID: 858893026}
+    - target: {fileID: 8051868356374313234, guid: 47288c1dffa738049ba3985e22888cbc,
         type: 3}
       propertyPath: keyText
       value: 

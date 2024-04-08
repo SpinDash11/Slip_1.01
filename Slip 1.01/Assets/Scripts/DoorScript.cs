@@ -21,11 +21,10 @@ public class DoorScript : KeyScript
     {
         if (collision.gameObject.tag == "Door")
         {
-            SceneManager.LoadScene("Level 2");
 
-            //if (keyCount == 5)
+            if (keyCount == 5)
             {
-                //SceneManager.LoadScene("Level 2");
+                SceneManager.LoadScene("Level 2");
             }
 
         }
