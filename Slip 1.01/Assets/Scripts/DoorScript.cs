@@ -1,31 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class KeyScript : MonoBehaviour
+public class DoorScript : KeyScript
 {
-    public Text keyText;
-    public int keyCount;
-
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        keyText.text = "Keys Needed: " + keyCount + "/5";
+        
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Key")
+        if (collision.gameObject.tag == "Door")
         {
-            Destroy(collision.gameObject);
-            ++keyCount;
+            SceneManager.LoadScene("Level 2");
+
+            //if (keyCount == 5)
+            {
+                //SceneManager.LoadScene("Level 2");
+            }
+
         }
     }
 }
