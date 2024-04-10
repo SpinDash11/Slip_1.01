@@ -13,7 +13,7 @@ public class Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping) 
         {
-            rb.AddForce(Vector3.up * 200);
+            rb.AddForce(Vector3.up * 1000);
             isJumping = true;
             rb.GetComponent<Rigidbody>();
             rb.mass = 2;
