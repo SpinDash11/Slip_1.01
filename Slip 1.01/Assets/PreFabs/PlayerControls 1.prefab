@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2617405595320519287}
-  dive: 4000
+  dive: 1000
 --- !u!114 &1190633950863801608
 MonoBehaviour:
   m_ObjectHideFlags: 0
