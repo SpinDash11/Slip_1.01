@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KeyScript : MonoBehaviour
 {
@@ -26,6 +27,16 @@ public class KeyScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             ++keyCount;
+        }
+
+        if (collision.gameObject.tag == "Door")
+        {
+
+            if (keyCount == 5)
+            {
+                SceneManager.LoadScene("Level 2");
+            }
+
         }
     }
 }
