@@ -21,7 +21,7 @@ public class Jump : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            rb.AddForce (Vector3.up * 0);
+            rb.AddForce (Vector3.back * 0);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
