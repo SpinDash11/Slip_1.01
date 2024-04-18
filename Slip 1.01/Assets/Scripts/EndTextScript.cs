@@ -10,7 +10,7 @@ public class EndTextScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        endText.enabled = false;
     }
 
     // Update is called once per frame
@@ -19,9 +19,9 @@ public class EndTextScript : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter (Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "End")
         {
             endText.enabled = true;
         }
