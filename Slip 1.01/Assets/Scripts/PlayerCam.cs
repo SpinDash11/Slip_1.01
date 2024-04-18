@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    public float sensX = 800;
+    public float sensY = -800;
 
     public Transform orientation;
 
@@ -31,4 +32,23 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
     }
+
+    public void HighSens()
+    {
+        sensX = 800;
+        sensY = -800;
+    }
+
+    public void MediumSens()
+    {
+        sensX = 350;
+        sensY = -350;
+    }
+
+    public void LowSens()
+    {
+        sensX = 200;
+        sensY = -200;
+    }
+
 }
