@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 121031401465391291}
   - component: {fileID: 6457196956506247936}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1828,17 +1828,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Movement: "W,A,S,D" Keys.
-
-
-    Ground Slam: "Shift" Key.
-
-
-    Jump:
-    "Space"
-
-
-    Air Brake: "S" + tapping "E"'
+  m_text: "Movement: \"W,A,S,D\" Keys\n\nDive/Ground Brake: \"Shift\" \n\nJump: \"Space\"\n\nAir
+    Brake: Hold \"S\" + tap \"E\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2642,7 +2633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
