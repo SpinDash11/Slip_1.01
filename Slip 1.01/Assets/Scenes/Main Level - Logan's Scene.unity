@@ -5972,6 +5972,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459792621}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1467555566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3430716690584557435, guid: 47288c1dffa738049ba3985e22888cbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5951842417980012471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188158939d95e584baa95db07f6338db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1494728814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6540566572264625202, guid: 46d58f7dc4bd5864496326b1b778d8b7,
@@ -8992,6 +9004,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5893108833592159034, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1467555566}
+    - target: {fileID: 5893108833592159034, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MediumSens
+      objectReference: {fileID: 0}
     - target: {fileID: 6600117235583093154, guid: 46d58f7dc4bd5864496326b1b778d8b7,
         type: 3}
       propertyPath: m_Pivot.x
@@ -9091,6 +9113,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991455014340399023, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1467555566}
+    - target: {fileID: 6991455014340399023, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HighSens
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011729182910248061, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1467555566}
+    - target: {fileID: 7011729182910248061, guid: 46d58f7dc4bd5864496326b1b778d8b7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LowSens
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
