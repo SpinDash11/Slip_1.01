@@ -14,7 +14,11 @@ TagManager:
   - Key
   - Door
   - End
+<<<<<<< Updated upstream
   - JumpPad
+=======
+  - CheckPoint
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
