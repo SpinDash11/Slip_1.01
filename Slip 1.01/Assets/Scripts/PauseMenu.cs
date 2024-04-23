@@ -62,14 +62,5 @@ public class PauseMenu : MonoBehaviour
         Resume();
     }
 
-    public void LoadLevelOne()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void LoaadLevelTwo()
-    {
-        SceneManager.LoadScene(2);
-    }
 
 }
