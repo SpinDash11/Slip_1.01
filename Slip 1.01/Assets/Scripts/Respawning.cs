@@ -7,36 +7,24 @@ public class Respawning : MonoBehaviour
 {
     public GameObject Respawn;
 
-    // sets the new respawn checkpoint
-    public GameObject CheckPoint;
-
-    // OnTrigger Checks to see if the checkpoint is set to true(active)
-    public bool isActive = false;
-
-
-    // changed OnCollision to Ontrigger:
-    private void OnTriggerEnter(Collider other)
+    // Start is called before the first frame update
+    void Start()
     {
-         // activates the checkpoint when the player collides with the checkpoint. 
-        if (other.gameObject.tag == "CheckPoint")
-        {
-            isActive = true;
-        }
-
-        if (other.gameObject.tag == "DeathZone")
-        {
-            if (isActive == true)
-            {
-                this.transform.position = CheckPoint.transform.position;
-            }
-            else
-            {
-                this.transform.position = Respawn.transform.position;
-            }
-            
-
-        } 
+        
     }
-  
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "DeathZone")
+        {
+            this.transform.position = Respawn.transform.position;
+            
+        }
+    }
 }
