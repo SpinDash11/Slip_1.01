@@ -6,25 +6,31 @@ using UnityEngine.UIElements;
 public class Respawning : MonoBehaviour
 {
     public GameObject Respawn;
+    public GameObject CheckPoint;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool checkPointisActive = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "DeathZone")
+        if (other.gameObject.tag == "CheckPoint")
         {
-            this.transform.position = Respawn.transform.position;
-            
+            checkPointisActive = true;
         }
+
+        if (other.gameObject.tag == "DeathZone")
+        {
+            if (checkPointisActive == true)
+            {
+                this.transform.position = CheckPoint.transform.position;
+            }
+            else
+            {
+                this.transform.position = Respawn.transform.position;
+
+            }
+        }
+        
     }
 }

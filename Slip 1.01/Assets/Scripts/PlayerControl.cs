@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     public float speed = 20.0f;
     public float boostSpeed;
     public float dragSpeed;
+    public float JumpPadDist = 10;
 
     public Transform orientation;
 
@@ -30,8 +31,7 @@ public class PlayerControl : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
 
-        GearShiftFast();
-        GearShiftSlow();
+        
         PlayerMovement();
     }
 
@@ -41,21 +41,7 @@ public class PlayerControl : MonoBehaviour
         rb.AddForce(moveDirection.normalized * speed, ForceMode.Force);
     }
 
-    private void GearShiftFast()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            speed = 50;
-        }
-    }
-
-    private void GearShiftSlow()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            speed = 5;
-        }
-    }
+    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "BoostPad")
@@ -76,7 +62,17 @@ public class PlayerControl : MonoBehaviour
             dragSpeed = speed;
         }
 
-        if (collision.gameObject.tag == "DeathZone")
+        
+
+        if (collision.gameObject.tag == "JumpPad")
+        {
+            rb.AddForce(Vector3.up * JumpPadDist, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DeathZone")
         {
             speed = 0;
         }
