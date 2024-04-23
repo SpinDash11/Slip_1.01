@@ -62,14 +62,19 @@ public class PlayerControl : MonoBehaviour
             dragSpeed = speed;
         }
 
-        if (collision.gameObject.tag == "DeathZone")
-        {
-            speed = 0;
-        }
+        
 
         if (collision.gameObject.tag == "JumpPad")
         {
             rb.AddForce(Vector3.up * JumpPadDist, ForceMode.Impulse);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "DeathZone")
+        {
+            speed = 0;
         }
     }
 }

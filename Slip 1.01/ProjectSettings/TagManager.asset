@@ -15,6 +15,7 @@ TagManager:
   - Door
   - End
   - JumpPad
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
