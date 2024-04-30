@@ -16,6 +16,7 @@ TagManager:
   - End
   - JumpPad
   - CheckPoint
+  - StopTimer
   layers:
   - Default
   - TransparentFX
